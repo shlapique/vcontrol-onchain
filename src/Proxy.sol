@@ -8,6 +8,7 @@ contract Proxy is UUPSUpgradeable, Ownable {
     address public currentImplementation;
     address[] public versionHistory;
     address public immutable vControlContract;
+
     bool private initialized = false;
 
     constructor(address vControlAddr) Ownable(vControlAddr) {
